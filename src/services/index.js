@@ -1,0 +1,1 @@
+export * as FetchService from './demoFetch';
