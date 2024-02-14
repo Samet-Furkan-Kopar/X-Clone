@@ -1,48 +1,31 @@
 import { NavLink } from "react-router-dom";
-import Icon from "../../../../components/Icon";
 import classNames from "classnames";
+import { mainMenu } from "../../../../utils/consts";
 export default function Menu() {
     return (
         <nav className="mt-0.5 mb-1">
-            <NavLink to="/" className="py-1 block group">
-                {({isActive}) => (
-                    <div
-                        className={classNames({
-                            "p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]": true,
-                            "font-bold": isActive,
-                        })}
-                    >
-                        {!isActive ? (<Icon className="block" name="home" size={24} /> ) : ( <Icon className="block" name="activeHome" size={24} />)}
-                        Anasayfa
-                    </div>
-                )}
-            </NavLink>
-            <NavLink to="/explore" className="py-1 block group">
-                {({isActive}) => (
-                    <div
-                        className={classNames({
-                            "p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]": true,
-                            "font-bold": isActive,
-                        })}
-                    >
-                        {!isActive ? (<Icon className="block" name="search" size={24} /> ) : ( <Icon className="block" name="activeSearch" size={24} />)}
-                        Keşfet
-                    </div>
-                )}
-            </NavLink>
-            <NavLink to="/notifications" className="py-1 block group">
-                {({isActive}) => (
-                    <div
-                        className={classNames({
-                            "p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]": true,
-                            "font-bold": isActive,
-                        })}
-                    >
-                        {!isActive ? (<Icon className="block" name="notification" size={24} /> ) : ( <Icon className="block" name="activeNotification" size={24} />)}
-                        Keşfet
-                    </div>
-                )}
-            </NavLink>
+            {mainMenu.map((menu, index) => (
+                <NavLink to={menu.path} key={index} className="py-1 block group">
+                    {({ isActive }) => (
+                        <div
+                            className={classNames({
+                                "p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]": true,
+                                "font-bold": isActive,
+                            })}
+                        >
+                            <div className="w-[26.25] h-[26.25] relative">
+                                {menu?.notification && <span className="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]">
+                                    {menu?.notification}
+                                </span>}
+                                {!isActive && menu.icon.passive}
+                                {isActive && menu.icon.active}
+                            </div>
+
+                            <div className="pr-4 text-xl">{menu.title}</div>
+                        </div>
+                    )}
+                </NavLink>
+            ))}
         </nav>
     );
 }
