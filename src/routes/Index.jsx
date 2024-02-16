@@ -6,7 +6,7 @@ import Notifications from "../pages/notifications";
 import MainLayout from "../layouts/main";
 
 
-const routes = createBrowserRouter([
+export const Routes = createBrowserRouter([
 	{
 		path: '/',
 		element: <MainLayout />,
@@ -47,4 +47,3 @@ const routes = createBrowserRouter([
 	}
 ])
 
-export default routes
