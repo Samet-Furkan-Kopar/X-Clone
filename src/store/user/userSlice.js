@@ -3,15 +3,27 @@ import { createSlice } from "@reduxjs/toolkit";
 const UserSlice = createSlice({
     name: "auth",
     initialState: {
-        user: null,
+        currentAccount: {
+            id:1,
+            username: "safurks",
+            fullName: "Samet Furkan",
+            avatar: "/images/avatar2.png",
+        },
+        accounts: [],
        
     },
     reducers: {
-        setUser: (state, action) => {
-            state.user = action.payload;
+        _addAccount: (state, action) => {
+            state.accounts.push(action.payload);
         },
-        logout: (state) => {
-            state.user = null;
+        _removeAccount: (state,action) => {
+            state.accounts = state.accounts.filter(account => account.id !== action.payload);
+            if(state.currentAccount && action.payload === state.currentAccount.id) {
+                this.setCurrentAccount(false);
+            }   
+        },
+        _setCurrentAccount: (state, action) => {
+            state.currentAccount = action.payload;
         },
     },
 });
