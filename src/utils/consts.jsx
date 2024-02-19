@@ -2,8 +2,7 @@
 import Icon from "../components/Icon";
 import { store } from "../store/store.js";
 
-const states = store.getState();
-console.log(states);
+// console.log(states);
 export const mainMenu = [
     {
         path: "/",
@@ -63,11 +62,16 @@ export const mainMenu = [
         },
     },
     {
-        path: `/${states?.auth?.currentAccount?.username}`,
+        path: () => {
+            return `/${
+                store?.getState()?.auth?.currentAccount?.username &&
+                store?.getState()?.auth?.currentAccount?.username
+            }`;
+        },
         title: "Profil",
         icon: {
-            active: <Icon className="block" name="profile" size={24} />,
-            passive: <Icon className="block" name="activeProfile" size={24} />,
+            active: <Icon className="block" name="activeProfile" size={24} />,
+            passive: <Icon className="block" name="profile" size={24} />,
         },
     },
 ];

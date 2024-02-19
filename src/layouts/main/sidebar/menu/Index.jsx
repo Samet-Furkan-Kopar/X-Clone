@@ -3,11 +3,14 @@ import classNames from "classnames";
 import { mainMenu } from "../../../../utils/consts";
 import New from "./new";
 import More from "./more";
+import { useAccount } from "../../../../store/user/hooks";
 export default function Menu() {
+    const account = useAccount(); //key yerine account vermemizin sebebi kullanıcı değiştiğinde algılayabilmek için
+    console.log(account);
     return (
-        <nav className="mt-0.5 mb-1">
-            {mainMenu.map((menu, index) => (
-                <NavLink to={menu.path} key={index} className="py-[3px] block group">
+        <nav className="mt-0.5 mb-1" key={account}>
+            {mainMenu.map((menu,index) => (
+                <NavLink key={index} to={typeof menu.path === 'function' ? menu.path() : menu.path}  className="py-[2px] block group">
                     {({ isActive }) => (
                         <div
                             className={classNames({
@@ -28,7 +31,7 @@ export default function Menu() {
                     )}
                 </NavLink>
             ))}
-            <More />    
+            <More />
             <New />
         </nav>
     );
