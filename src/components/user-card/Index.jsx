@@ -6,13 +6,13 @@ export default function UserCard({ user }) {
     const [following, setFollowing] = useState(false);
 
     return (
-        <button className="py-3 hover:bg-white/[0.03] px-4 flex gap-3">
+        <button className="py-3 hover:bg-[color:var(--background-third)] px-4 flex gap-3">
             <img src={user?.avatar} className="w-10 h-10 rounded-full object-cover" />
             <div className="flex-1 flex flex-col text-left">
-                <div className="text-[15px] leading-5 text-[#e7e9ea] font-bold">
-                    {user?.username}
+                <div className="text-[15px] leading-5 font-bold">
+                    {user?.fullName}
                 </div>
-                <div className="text-[15px] text-[#71767b]">@{user?.fullName}</div>
+                <div className="text-[15px] text-[color:var(--color-base-secondary)]">@{user?.username}</div>
             </div>
             <div>
                 {following ? (

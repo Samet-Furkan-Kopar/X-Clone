@@ -1,39 +1,4 @@
 /* eslint-disable react/prop-types */
-// /* eslint-disable react/prop-types */
-// /* eslint-disable no-undef */
-// import { createElement } from "react";
-// import classNames from "classnames";
-// import PropTypes from "prop-types";
-
-// export default function Button({ size, variant, follow, children }) {
-//     return createElement(
-//         "button",
-//         {
-//             className: classNames({
-//                 " rounded-full flex items-center justify-center font-bold transation-colors": true,
-//                 "px-4 h-8 text-sm": size === "small",
-//                 "px-4 h-9": size === "normal",
-//                 "px-4 text-[17px] h-[52px] w-full": size === "large",
-//                 "bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white": variant === "primary",
-//                 "bg-[#eff3f4] hover:bg-[#d7dbdc] text-black": variant === "white",
-//                 "bg-[#202327] hover:bg-[#e28a8a] text-red": follow === "follow",
-//             }),
-//         },
-//         children
-//     );
-// }
-
-// Button.propTypes = {
-//     size: PropTypes.oneOf(["small", "normal", "large"]),
-//     variant: PropTypes.oneOf(["white", "primary"]),
-//     follow: PropTypes.oneOf(["follow", "unFollow"]),
-// };
-// Button.defaultProps = {
-//     size: "normal",
-//     variant: "primary",
-//     follow: "unfollow",
-// };
-
 import { createElement } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";

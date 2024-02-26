@@ -17,10 +17,10 @@ export default function Index() {
                     <Icon name="rightBar-footer" />
 				</Popover.Button>
 				<Popover.Panel className="w-[150px] absolute bottom-0 right-0 max-w-[384px] grid bg-black rounded-xl overflow-hidden">
-                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[#16181c] transition-colors font-bold leading-5 font-bold">Hakkında</Link>
-                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[#16181c] transition-colors font-bold leading-5 font-bold">Durum</Link>
-                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[#16181c] transition-colors font-bold leading-5 font-bold">İşlemler için X</Link>
-                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[#16181c] transition-colors font-bold leading-5 font-bold">Geliştiriciler</Link>
+                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[color:var(--background-secondary)]  transition-colors leading-5 font-bold">Hakkında</Link>
+                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[color:var(--background-secondary)]  transition-colors leading-5 font-bold">Durum</Link>
+                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[color:var(--background-secondary)]  transition-colors leading-5 font-bold">İşlemler için X</Link>
+                <Link to="/" className="py-3 px-4 text-[15px] hover:bg-[color:var(--background-secondary)]  transition-colors leading-5 font-bold">Geliştiriciler</Link>
 				</Popover.Panel>
 			</Popover>
       <p className="text-[#71767b] leading-4 text-[13px] ">

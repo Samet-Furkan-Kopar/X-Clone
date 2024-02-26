@@ -2,9 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+/* @layer base {
   html,body, #root {
    @apply min-h-screen bg-black text-white antialiased;
   }
 
- }
+ } */
+ :root {
+  font-size: var(--font-size);
+}
+
+body {
+  @apply bg-[color:var(--background-primary)] text-[color:var(--color-base)] text-[0.938rem];
+}
+
+.shadow-box {
+  box-shadow: var(--box-shadow);
+}

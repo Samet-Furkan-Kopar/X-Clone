@@ -6,12 +6,12 @@ import { Routes as routes } from "./routes";
 import "./assets/css/tailwind.css";
 import { Provider } from "react-redux";
 import { store } from "./store/store.js";
-import Modals from "./modals/Index";
+// import Modals from "./modals/Index";
 export const persistor = persistStore(store);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <Provider store={store}>
-        <Modals />
+        {/* <Modals /> */}
         <PersistGate loading={null} persistor={persistor}>
             <RouterProvider router={routes} />
         </PersistGate>

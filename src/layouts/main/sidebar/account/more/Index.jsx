@@ -26,7 +26,7 @@ export default function More({ onClose }) {
                     <img className="w-10 h-10 rounded-full" src={account?.avatar} />
                     <div className="mx-3 flex-1 text-[15px]">
                         <h6 className="font-bold leading-[20px]">{account?.fullName}</h6>
-                        <div className="text-[#71767b]"> @{account?.username} </div>
+                        <div className="text-[color:var(--color-base-secondary)]"> @{account?.username} </div>
                     </div>
                     {currentAccount?.id === account?.id && (
                         <Icon name="check" className="mr-2 ml-3" size={18.75} />

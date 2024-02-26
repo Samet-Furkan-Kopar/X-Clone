@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import Icon from "../../components/Icon";
 
 export default function Appearance() {
@@ -24,12 +23,12 @@ export default function Appearance() {
                                     X
                                     <Icon name="verifiedCheck" />
                                 </div>
-                                <div className="ml-1 flex items-center text-[#71767b]">@X</div>
+                                <div className="ml-1 flex items-center text-[color:var(--color-base-secondary)]">@X</div>
                             </header>
-                            <div className="text-[#e7e9ea] leading-5">
+                            <div className="text-[color:var(--color-base)] leading-5">
                                 X'in merkezinde, tıpkı bunun gibi gönderi denen kısa mesajlar yatar.
                                 Gönderiler; fotoğraflar, videolar, bağlantılar, metinler, etiketler
-                                ve @X gibi bahsetmeler içerebilir.
+                                ve <a href="/x" className="text-[color:var(--color-primary)] hover:underline">@X</a> gibi bahsetmeler içerebilir.
                             </div>
                         </div>
                     </div>

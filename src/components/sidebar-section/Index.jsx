@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export default function SidebarSection({ title, children, more }) {
 	return (
-		<section className="bg-[#202327] mb-4 overflow-hidden rounded-2xl border border-[#16181c]">
+		<section className="bg-[color:var(--background-secondary)] mb-4 rounded-2xl border border-[color:var(--background-secondary)]">
 			<h5 className="py-3 px-4 text-xl font-extrabold leading-6 flex items-center">
 				{title}
 			</h5>
@@ -13,7 +13,7 @@ export default function SidebarSection({ title, children, more }) {
 			{more && (
 				<Link
 					to={more}
-					className="h-[3.25rem] flex rounded-b-2xl items-center px-4 text-[#1d9bf0] transition-colors hover:bg-white/[0.03]"
+					className="h-[3.25rem] flex rounded-b-2xl items-center px-4 text-[color:var(--color-primary)] transition-colors hover:bg-[color:var(--background-third)]"
 				>
 					Daha fazla göster
 				</Link>

@@ -7,20 +7,20 @@ export default function Topic({item}) {
 	return (
 		<Link
 			to="/"
-			className="py-3 px-4 transition-colors hover:bg-white/[0.03] relative"
+			className="py-3 px-4 transition-colors hover:bg-[color:var(--background-third)] relative"
 		>
-			<div className="text-[0.813rem] text-[#71767b] leading-4">{item.title}</div>
+			<div className="text-[0.813rem] text-[color:var(--color-base-secondary)] leading-4">{item.title}</div>
 			<div className="font-bold leading-5 mt-0.5">
 				{item.topic.type === 'tag' && '#'}{item.topic.value}
 			</div>
 			{item?.postCount && (
-				<div className="text-[0.813rem] text-[#71767b] mt-1 leading-4">
+				<div className="text-[0.813rem] text-[color:var(--color-base-secondary)] mt-1 leading-4">
 					{numberFormat(item.postCount)} posts
 				</div>
 			)}
 			<Popover className="absolute top-1.5 right-2">
 				<Popover.Button
-					className="outline-none w-[34.75px] h-[34.75px] rounded-full text-[color:var(--color-base-secondary)] flex items-center justify-center hover:text-[#1d9bf0] transition-colors relative before:absolute before:inset-0 before:rounded-full hover:before:hover:bg-[color:var(--color-primary)] before:transition-all before:z-[-1] before:opacity-[.15] z-[1]"
+					className="outline-none w-[34.75px] h-[34.75px] rounded-full text-[color:var(--color-base-secondary)] flex items-center justify-center hover:text-[color:var(--color-primary)] transition-colors relative before:absolute before:inset-0 before:rounded-full hover:before:hover:bg-[color:var(--color-primary)] before:transition-all before:z-[-1] before:opacity-[.15] z-[1]"
 				>
 					<svg viewBox="0 0 24 24" className="h-[1.172rem]">
 						<path
@@ -29,7 +29,7 @@ export default function Topic({item}) {
 						/>
 					</svg>
 				</Popover.Button>
-				<Popover.Panel className="w-[24rem] rounded-xl grid absolute top-2 overflow-hidden right-0 bg-[color:var(--background-primary)] shadow-box bg-black z-[2]">
+				<Popover.Panel className="w-[24rem] rounded-xl grid absolute top-2 overflow-hidden right-0 bg-[color:var(--background-primary)] shadow-box z-[2]">
 					<button type="button" className="hover:bg-[color:var(--background-secondary)] transition-colors text-left py-3 px-4 flex items-center gap-3 leading-5 font-bold ">
 						<svg viewBox="0 0 24 24" className="h-[1.172rem]">
 								<path
