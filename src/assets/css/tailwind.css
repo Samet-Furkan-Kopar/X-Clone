@@ -4,7 +4,7 @@
 
 @layer base {
   html,body, #root {
-   @apply h-full bg-black text-white antialiased;
+   @apply min-h-screen bg-black text-white antialiased;
   }
 
  }

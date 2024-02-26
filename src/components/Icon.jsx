@@ -9,7 +9,6 @@ const Icon = ({ name, size = 16, ...props }) => {
                 width={size}
                 height={size}
                 {...props}
-                //  preProcessor={(code)=> code.replace(/fill=".*?"/g, 'fill = "currentColor"')}
             />
         </>
     );

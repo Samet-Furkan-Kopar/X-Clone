@@ -2,14 +2,11 @@
 import classNames from "classnames";
 import { useAccounts, useAccount } from "../../../../../store/user/hooks.js";
 import Icon from "../../../../../components/Icon";
-import { useEffect } from "react";
 import { setCurrentAccount } from "../../../../../store/user/actions.js";
 export default function More({ onClose }) {
     const accounts = useAccounts();
     const currentAccount = useAccount();
-    useEffect(() => {
-        console.log(currentAccount);
-    }, [currentAccount]);
+
     return (
         <div>
             {accounts?.map((account) => (

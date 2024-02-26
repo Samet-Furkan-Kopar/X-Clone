@@ -2,9 +2,35 @@
 
 const Home = () => {
   return (
-    <div>
-      Home Page
+    <>
+    <div className="h-[300px]">
+     home
+   
     </div>
+    <div className="h-[300px]">
+     home
+   
+    </div>
+    <div className="h-[300px]">
+     home
+   
+    </div>
+    <div className="h-[300px]">
+     home
+   
+    </div>
+    <div className="h-[300px]">
+     home
+   
+    </div>
+    <div className="h-[300px]">
+     home
+   
+    </div>
+    <div className="h-[300px]">
+     home
+   
+    </div></>
   )
 }
 
