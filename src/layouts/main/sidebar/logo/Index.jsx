@@ -5,7 +5,7 @@ export default function Logo() {
         <div className="py-0.5">
             <Link
                 to="/"
-                className="w-[52px] h-[52px] rounded-full flex items-center justify-center hover:bg-[#5dd26a1a] transation-colors"
+                className="w-[52px] h-[52px] rounded-full flex items-center justify-center hover:bg-[color:var(--background-third)] transation-colors"
             >
                 <Icon name="logo" size={30}/>
             </Link>

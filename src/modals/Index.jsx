@@ -1,5 +1,6 @@
 import modals from "../routes/modals";
 import { useModal } from "../store/modal/hooks";
+import { removeModel } from "../store/modal/actions";
 
 export default function Modals() {
     const modal = useModal();
@@ -9,9 +10,9 @@ export default function Modals() {
     return (
         <>
             {currentModal && (
-                <div className="fixed inset-0 bg-[#5b7083]/40 flex items-center justify-center z-10">
-                    <div className="bg-black max-w-[600px] max-h-[90vh] rounded-2xl overflow-auto">
-                        <currentModal.element />
+                <div className="fixed inset-0 bg-[color:var(--background-modal)] flex items-center justify-center z-20">
+                    <div className="bg-[color:var(--background-primary)] max-w-[600px] max-h-[90vh] rounded-2xl overflow-auto">
+                        <currentModal.element close={removeModel} />
                     </div>
                 </div>
             )}

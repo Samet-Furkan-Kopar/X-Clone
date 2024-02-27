@@ -13,14 +13,14 @@ export default function Account() {
                     <img className="w-10 h-10 rounded-full" src={account?.avatar} />
                     <div className="mx-3 text-[15px]">
                         <h6 className="font-bold leading-[20px]">{account?.fullName}</h6>
-                        <div className="text-[#71767b]"> @{account?.username} </div>
+                        <div className="text-[color:var(--color-base-secondary)]"> @{account?.username} </div>
                     </div>
                     <div className="ml-auto">
                         <Icon name="threedot" size={18.5} />
                     </div>
                 </Popover.Button>
 
-                <Popover.Panel className="absolute bottom-full overflow-hidden py-3 w-[300px] left-1/2 -translate-x-1/2 shadow-box bg-black rounded-2xl">
+                <Popover.Panel className="absolute bottom-full overflow-hidden py-3 w-[300px] left-1/2 -translate-x-1/2 shadow-box bg-[color:var(--background-primary)] rounded-2xl">
                     {({ close }) => <More onClose={close} />}
                 </Popover.Panel>
             </Popover>

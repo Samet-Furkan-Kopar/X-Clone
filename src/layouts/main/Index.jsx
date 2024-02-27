@@ -34,7 +34,7 @@ const Index = () => {
       {modal && <Modals/>}
         <Sidebar/>
         <div className="flex flex-1 gap-[30px]">
-        <main className="flex-1 max-w-[600px] border-x border-[#2f3336]">
+        <main className="flex-1 max-w-[600px] border-x border-[color:var(--background-third)]">
           <Outlet/>
         </main>
         <RightBar/>
