@@ -2,8 +2,7 @@ import classNames from "classnames";
 import Icon from "../../../../../components/Icon";
 import { Popover, Disclosure } from "@headlessui/react";
 import { Link } from "react-router-dom";
-import { removeModel, setModel } from "../../../../../store/modal/actions";
-import { removeall } from "../../../../../store/appearance/actions";
+import { setModel } from "../../../../../store/modal/actions";
 
 export default function More() {
     return (
@@ -49,7 +48,7 @@ export default function More() {
                                 İçerik Üreticisi Stüdyosu	
                                 <svg
                                     className={classNames("h-[1.172rem]", {
-                                        "rotate-180 text-[color:var(--background-primary)bf0]": open,
+                                        "rotate-180 text-[color:var(--color-primary)]": open,
                                     })}
                                     viewBox="0 0 24 24"
                                 >
@@ -79,7 +78,7 @@ export default function More() {
                                 <svg
                                     viewBox="0 0 24 24"
                                     className={classNames("h-[1.172rem]", {
-                                        "rotate-180 text-[color:var(--background-primary)#1d9bf0]": open,
+                                        "rotate-180 text-[color:var(--color-primary)]": open,
                                     })}
                                 >
                                     <path
@@ -108,7 +107,7 @@ export default function More() {
                                 <svg
                                     viewBox="0 0 24 24"
                                     className={classNames("h-[1.172rem]", {
-                                        "rotate-180 text-[color:var(--background-primary)]": open,
+                                        "rotate-180 text-[color:var(--color-primary)]": open,
                                     })}
                                 >
                                     <path

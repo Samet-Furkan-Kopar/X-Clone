@@ -6,7 +6,6 @@ export default function Modals() {
     const modal = useModal();
     const currentModal = modals.find((m) => m.name === modal);
    
-
     return (
         <>
             {currentModal && (
