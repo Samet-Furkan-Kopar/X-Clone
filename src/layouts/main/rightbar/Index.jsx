@@ -5,7 +5,7 @@ import WhoFollow from "./who-follow";
 import Footer from "./footer";
 const Index = () => {
   return (
-    <div className='w-[350px] mr-2.5 min-h-screen '>
+    <div className='w-[250px] md:w-[350px]  mr-2.5 sm:mr-1 min-h-screen '>
       <Search />
       <Premium />
       <Topics />

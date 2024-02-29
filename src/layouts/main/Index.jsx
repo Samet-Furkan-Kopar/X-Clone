@@ -30,14 +30,14 @@ const Index = () => {
   }, [appearance]);
 
   return (
-    <div className="w-[1265px] mx-auto flex">
+    <div className="w-[1265px] min-w-screen mx-auto flex">
       {modal && <Modals/>}
-        <Sidebar/>
+       <Sidebar/> 
         <div className="flex flex-1 gap-[30px]">
         <main className="flex-1 max-w-[600px] border-x border-[color:var(--background-third)]">
           <Outlet/>
         </main>
-        <RightBar/>
+       <RightBar/>
         </div>
     </div>
   )

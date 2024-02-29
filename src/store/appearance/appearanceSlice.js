@@ -7,6 +7,7 @@ const AppearanceSlice = createSlice({
             name: "darker",
             primary: "#000000",
             secondary: "#16181c",
+            primaryAlpha: "#000000a6",
             third: "#212327",
             modal: "#5b708366",
         },
